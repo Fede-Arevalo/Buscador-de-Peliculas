@@ -13,7 +13,7 @@
 
   <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
-      <h3>CineFlix</h3>
+      <h1 style="margin:5px 0px 10px 60px">CineFlix</h1>
     </div>
   </nav>
   <br>
@@ -21,17 +21,22 @@
 
     <div class="form-group">
 
-      <h1>Bienvenidos.</h1>
-      <h3>Millones de películas por descubrir. Explora ahora.</h3>
+      <h1>Welcome!</h1>
+      <h3>Millions of movies to discover... Explore now!</h3>
     </div>
 
     <form id="form" class="form-group">
 
-      <input type="text" class="form-control" placeholder="Buscar una película, género, person..." id="buscar" />
+      <input type="text" class="form-control" placeholder="Search for a movie, genre, character..." id="buscar" />
       <br>
-      <input type="submit" value="Buscar" class="btn btn-primary" />
+
+      <div class="d-grid gap-2">
+        <input type="submit" value="Search" class="btn btn-primary" />
+      </div>
 
     </form>
+
+    <br>
 
     <div class="peliculas d-flex flex-wrap justify-content-center"></div>
 
