@@ -1,21 +1,6 @@
 const peliculasDiv = document.querySelector(".peliculas");
 const formBuscar = document.getElementById("form");
 
-const mostrarPelicula = (pelicula) => {
-  peliculasDiv.innerHTML = "";
-  pelicula.forEach((pelicula) => {
-    peliculasDiv.innerHTML += `
-                  <div class="card m-1" style="width: 18rem;">
-                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/${pelicula.poster_path}" class="card-img-top" alt="Card image">
-                      <div class="card-body">
-                        <h4 class="card-title">${pelicula.title}</h4>
-                          <p class="card-text">${pelicula.overview}</p>
-                      </div>
-                  </div> 
-    `;
-  });
-};
-
 const buscarPelicula = async (e) => {
   e.preventDefault();
   try {
@@ -31,3 +16,18 @@ const buscarPelicula = async (e) => {
 };
 
 formBuscar.addEventListener("submit", buscarPelicula);
+
+const mostrarPelicula = (pelicula) => {
+  peliculasDiv.innerHTML = "";
+  pelicula.forEach((pelicula) => {
+    peliculasDiv.innerHTML += `
+                  <div class="card m-1" style="width: 18rem;">
+                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/${pelicula.poster_path}" class="card-img-top" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">${pelicula.title}</h4>
+                          <p class="card-text">${pelicula.overview}</p>
+                      </div>
+                  </div> 
+    `;
+  });
+};
